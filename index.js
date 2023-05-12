@@ -4,7 +4,7 @@ const mysql				= require( 'mysql' );
 
 const headers			= { "Content-Type": "application/json" };
 const INVALID_REQUEST	= 'Invalid Request.';
-const DB_NAME			= 'crush';
+const DB_NAME			= 'crush2';
 
 const return_error		= ( message )	=> { return { statusCode: 400, body: message, headers: headers }; };
 const return_results	= ( data )		=> { return { statusCode: 200, body: data, headers: headers }; };
