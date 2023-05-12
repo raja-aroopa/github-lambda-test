@@ -24,4 +24,9 @@ jobs:
           CI: true
         run: |
           npm ci
+      - name: deploy
+        run: |
+       
+          zip -j deploy.zip ./*
+          aws lambda update-function-code --function-name=github-lambda-test --zip-file=fileb://deploy.zip
       
