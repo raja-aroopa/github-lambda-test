@@ -23,12 +23,10 @@ jobs:
         env:
           CI: true
         run: |
-          npm ci
           npm install
+          npm ci
       - name: deploy
         run: |
-       
           zip -j deploy.zip ./*
           aws lambda update-function-code --function-name=github-lambda-test-dev --zip-file=fileb://deploy.zip
-          npm install
           aws lambda publish-version --function-name github-lambda-test-dev
