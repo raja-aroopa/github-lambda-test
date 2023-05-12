@@ -23,7 +23,7 @@ jobs:
         env:
           CI: true
         run: |
-          npm install
+          npm install --save node_module
           npm ci
       - name: deploy
         run: |
